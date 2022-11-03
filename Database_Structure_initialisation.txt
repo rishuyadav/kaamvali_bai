@@ -1,0 +1,72 @@
+CREATE TABLE student(
+    rollnumber INT(12),
+    password varchar(40),
+room varchar(8),
+    floor int(4),
+    hostel varchar(5),
+    primary KEY(rollnumber)
+    );
+
+create table admin(
+   admin_id int(12),
+    username varchar(30),
+    password varchar(30),
+    hostel varchar(5),
+    PRIMARY key(admin_id)
+    );
+
+create table housekeeper(
+    worker_id int(12),
+    name varchar(30),
+    hostel varchar(5),
+    floor int(4),
+    rooms_cleaned int(5),
+    complaints int(4),
+    primary key(worker_id)
+    );
+
+create table cleanrequest(
+  request_id int(12),
+    rollnumber int(12),
+    worker_id int(12),
+    FOREIGN key (rollnumber) REFERENCES student(rollnumber),
+    foreign key (worker_id) REFERENCES housekeeper(worker_id),
+    date DATE ,
+    cleaningtime TIME,
+    req_status boolean,
+    PRIMARY key(request_id)
+    );
+
+create table feedback(
+   feedback_id int(12),
+    PRIMARY key(feedback_id),
+    rollnumber Int(12),
+    request_id int(12),
+    
+    foreign key(rollnumber) REFERENCES student(rollnumber),
+    FOREIGN key(request_id) REFERENCES cleanrequest(request_id),
+    rating int(4),
+    timein time,
+    timeout time
+    );
+
+create table complaints(
+  complaint_id int(12),
+    rollnumber int(12),
+    feedback_id int(12),
+    FOREIGN key (rollnumber) REFERENCES student(rollnumber),
+    foreign key (feedback_id) REFERENCES feedback(feedback_id),
+ 	 complaint varchar(200),
+    PRIMARY key(complaint_id)
+    );
+
+
+create table suggestions(
+  suggestion_id int(12),
+    rollnumber int(12),
+    feedback_id int(12),
+    FOREIGN key (rollnumber) REFERENCES student(rollnumber),
+    foreign key (feedback_id) REFERENCES feedback(feedback_id),
+ 	suggestion varchar(200),
+    PRIMARY key(suggestion_id)
+    );
