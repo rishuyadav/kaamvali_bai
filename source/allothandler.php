@@ -29,9 +29,9 @@
       $reg_query = "Insert into student values ('$rollnumber', '$password', '$roomnumber', '$floornumber', '$hostel_name')";
       $reg_result = mysqli_query($db, $reg_query);
       if($reg_result){
-        $_SESSION['student_registered'] = 'Student with Rollnumber '. $rollnumber .' is Registered.';
+        $_SESSION['student_registered'] = 'Customer Id '. $rollnumber .' is Registered.';
       } else{
-        $_SESSION['student_registered'] = 'Student is already Registered!';
+        $_SESSION['student_registered'] = 'Customer is already Registered!';
       }
       header("Location: registerstudent.php");
     }
@@ -40,12 +40,13 @@
     // Worker Registration
     if(isset($_POST['regKeeperSubmit']) && isset($_SESSION['username'])){
       $name = mysqli_real_escape_string($db, $_POST['regName']);
+      $id = mysqli_real_escape_string($db, $_POST['regId']);
       $floornumber = mysqli_real_escape_string($db, $_POST['regFloor']);
       $hostel_name = substr($_SESSION['username'], -1);
 
       $name = strtolower($name);
 
-      $reg_query = "Insert into housekeeper (name, hostel, floor) values ('$name', '$hostel_name', '$floornumber')";
+      $reg_query = "Insert into housekeeper (worker_id,name, hostel, floor) values ('$id','$name', '$hostel_name', '$floornumber')";
       $reg_result = mysqli_query($db, $reg_query);
       if($reg_result){
         $_SESSION['worker_registered'] = 'New Housekeeper Registered.';

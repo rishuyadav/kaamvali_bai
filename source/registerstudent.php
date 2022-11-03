@@ -44,7 +44,7 @@
         <div class="col-xl-12 order-xl-1">
           <div class="card bg-secondary shadow">
             <div class="card-header bg-white border-0">
-              <h3 class="mb-0">Register New Student</h3>
+              <h3 class="mb-0">Register New Customer</h3>
             </div>
             <div class="card-body pb-5">
               <form method="POST" autocomplete="off" action="allothandler.php">
@@ -52,20 +52,20 @@
                   <div class="row">
                     <div class="col-md-3">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-id">Roll Number <span class="text-danger">*</span></label>
-                        <input type="number" name="regRoll" id="input-id" class="form-control" required placeholder="Enter numeric value">
+                        <label class="form-control-label" for="input-id">Customer ID <span class="text-danger">*</span></label>
+                        <input type="number" name="regRoll" id="input-id" class="form-control" required placeholder="Enter customer id">
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-room">Room Number <span class="text-danger">*</span></label>
-                        <input type="text" name="regRoom" id="input-room" class="form-control" required placeholder="Ex : C202">
+                        <label class="form-control-label" for="input-room">Location <span class="text-danger">*</span></label>
+                        <input type="text" name="regRoom" id="input-room" class="form-control" required placeholder="Ex : Civil Lines, Delhi">
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-time">Floor <span class="text-danger">*</span></label>
-                        <input type="number" name="regFloor" id="input-time" class="form-control" required placeholder="Enter single digit no.">
+                        <label class="form-control-label" for="input-time">Floor/Room Number <span class="text-danger">*</span></label>
+                        <input type="number" name="regFloor" id="input-time" class="form-control" required placeholder="Ex: R1409">
                       </div>
                     </div>
                   </div>

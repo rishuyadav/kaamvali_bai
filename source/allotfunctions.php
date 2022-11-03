@@ -75,5 +75,3 @@
       $result_request = mysqli_query($db, $query_request);
       return $result_request;
     }
-
-?>

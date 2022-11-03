@@ -56,7 +56,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">Hostel</th>
+                    <th scope="row">Sector</th>
                     <td><?php echo strtoupper($student['hostel']); ?></td>
                   </tr>
                   <tr>
@@ -64,7 +64,7 @@
                     <td><?php echo $student['floor']; ?></td>
                   </tr>
                   <tr>
-                    <th scope="row">Room</th>
+                    <th scope="row">Address</th>
                     <td><?php echo strtoupper($student['room']); ?></td>
                   </tr>
                 </tbody>

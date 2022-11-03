@@ -82,7 +82,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="registerstudent.php">
-            <i class="ni ni-single-02"></i>Register Student
+            <i class="ni ni-single-02"></i>Register Customer
           </a>
         </li>
         <li class="nav-item">

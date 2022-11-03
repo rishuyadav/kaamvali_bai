@@ -50,10 +50,18 @@
               <form method="POST" autocomplete="off" action="allothandler.php">
                 <div class="pl-lg-4">
                   <div class="row">
+
+                  <div class="col-md-3">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-id">Worker Id <span class="text-danger">*</span></label>
+                        <input type="text" name="regId" id="input-id" class="form-control" required placeholder="Housekeeper Id">
+                      </div>
+                    </div>
+
                     <div class="col-md-3">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-id">Name <span class="text-danger">*</span></label>
-                        <input type="text" name="regName" id="input-id" class="form-control" required placeholder="Housekeeper Name">
+                        <label class="form-control-label" for="input-name">Name <span class="text-danger">*</span></label>
+                        <input type="text" name="regName" id="input-name" class="form-control" required placeholder="Housekeeper Name">
                       </div>
                     </div>
                     <div class="col-md-3">
