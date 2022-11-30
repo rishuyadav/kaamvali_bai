@@ -3,7 +3,7 @@
 
 # Project Objectives
 
-01 To provide a smooth and flawless interface for requesting house help services at doorstep with trust and at short notice /n
+01 To provide a smooth and flawless interface for requesting house help services at doorstep with trust and at short notice &nbsp;
 02 An application for the welfare of the mostly disregarded people in the society- THE HOUSEHELP
 03 A unique platform with several new and one of its kind features such as credit system and trust scores.
 
